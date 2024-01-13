@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url(../fonts/Commissioner-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commissioner";
+  src: url(../fonts/Commissioner-Medium.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commissioner";
+  src: url(../fonts/Commissioner-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src: url(../fonts/NotoSerif_Condensed-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src: url(../fonts/NotoSerif_Condensed-Medium.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Serif";
+  src: url(../fonts/NotoSerif_Condensed-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: Commissioner, serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  transition: 0.3s ease;
+  scroll-behavior: smooth;
+  color: #0D1D53;
+  display: flex;
+  flex-direction: column;
+  background: #000008;
+}
+
+h1 {
+  color: #FFF;
+  font-family: Noto Serif, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.content {
+  max-width: 1272px;
+  padding: 0 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 11px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+}
+.header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .header .content nav {
+    display: none;
+  }
+}
+.header .content nav ul {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.header .content nav ul li a {
+  color: #FFF;
+  font-family: Commissioner, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+.header .content nav ul li a:hover {
+  color: #587DBD;
+  font-family: Commissioner, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header .content .tickets {
+  color: #FFF;
+  font-family: Commissioner, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-flex;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  border: 1px solid #FFF;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.header .content .tickets::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='183' height='49' viewBox='0 0 183 49' fill='none'%3E%3Cg clip-path='url(%23clip0_898_1207)'%3E%3Crect width='390' height='49' fill='url(%23paint0_linear_898_1207)'/%3E%3Crect width='390' height='49' fill='url(%23paint1_linear_898_1207)'/%3E%3Crect width='390' height='49' fill='%23587DBD' fill-opacity='0.4'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_898_1207' x1='1.40527e-06' y1='24' x2='198.634' y2='-33.4777' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231E4BEC'/%3E%3Cstop offset='0.358906' stop-color='%239747FF'/%3E%3Cstop offset='0.72144' stop-color='%23587DBD'/%3E%3Cstop offset='1' stop-color='%231E4BEC'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_898_1207' x1='390' y1='24' x2='115' y2='9.00002' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231E4BEC'/%3E%3Cstop offset='0.408723' stop-color='%23E33629' stop-opacity='0.1'/%3E%3Cstop offset='1' stop-color='%231E4BEC' stop-opacity='0'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_898_1207'%3E%3Crect width='183' height='49' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.header .content .tickets:hover::before {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .header .content .tickets {
+    display: none;
+  }
+}
+.header .content .burger-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header .content .burger-btn {
+    display: block;
+  }
+}
+.header .content .burger-btn.active .menu__btn > span {
+  transform: rotate(45deg);
+}
+.header .content .burger-btn.active .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+.header .content .burger-btn.active .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.header .content .burger-btn .menu__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(50%);
+}
+.header .content .burger-btn .menu__btn > span,
+.header .content .burger-btn .menu__btn > span::before,
+.header .content .burger-btn .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition-duration: 0.25s;
+}
+.header .content .burger-btn .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.header .content .burger-btn .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.header .content .burger-menu {
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  z-index: 4;
+  padding: 165px 16px 16px;
+  left: -2100px;
+  transition: 0.5s ease;
+}
+.header .content .burger-menu ul {
+  height: calc(100vh - 165px);
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
